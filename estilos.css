@@ -1,0 +1,117 @@
+
+body {
+    background-image: url(sailor-moon-cosmic-team-desktop-wallpaper-preview.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+
+    display: grid;
+    min-height: 100vh;
+    /* Define las filas: header, nav, contenido (crece), y footer */
+    grid-template-rows: auto auto 1fr auto;
+    justify-items: center; /* Centra horizontalmente los bloques */
+}
+
+/* Asegura que estas secciones ocupen todo el ancho */
+header, nav, footer {
+    width: 100%;
+}
+
+header {
+    background-color: #1a0355;
+    padding: 20px;
+    color: white;
+}
+
+/* NAVEGACIÓN Y MENÚ CENTRADO */
+nav {
+    background-color: #4b0082;
+    padding: 0; /* Quitamos padding para que el color de los LI llene el espacio */
+    display: flex;
+    justify-content: center;
+}
+
+.menu-principal {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: #ffe3f0;
+    display: flex; /* Alinea los botones de primer nivel horizontalmente */
+}
+
+nav li {
+    position: relative; /* Necesario para posicionar submenús */
+    border: 1px solid #ffb6c1;
+    min-width: 150px; /* Ancho base para los botones del menú */
+}
+
+nav a {
+    display: block;
+    padding: 12px 20px;
+    text-decoration: none;
+    color: #724658;
+    font-weight: bold;
+}
+
+/* 3. SUBMENÚS */
+.submenu, .submenu-nivel2 {
+    display: none; 
+    position: absolute;
+    background: #fff;
+    width: 200px;
+    z-index: 999;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+}
+
+/* El primer submenú baja verticalmente */
+.menu-principal > li > .submenu {
+    top: 100%;
+    left: 0;
+}
+
+/* Submenús de niveles profundos salen a la derecha */
+.submenu .submenu-nivel2 {
+    top: 0;
+    left: 100%;
+}
+
+/* Mostrar submenús al pasar el mouse */
+li:hover > ul {
+    display: block !important;
+}
+
+/* Efectos Hover */
+nav li:hover {
+    background-color: #ff69b4;
+}
+nav li:hover > a {
+    color: white;
+}
+
+/* 4. CONTENIDO (SECCIÓN) */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    width: 80%;
+    max-width: 1000px; /* Evita que sea demasiado ancho en monitores grandes */
+    background-color: rgba(26, 3, 85, 0.9); /* Un poco de transparencia para ver el fondo */
+    border: 2px solid #4b0082;
+    border-radius: 10px;
+    color: white;
+    align-self: start; 
+}
+
+/* 5. PIE DE PÁGINA */
+footer {
+    background-color: #4b0082;
+    color: white;
+    padding: 15px;
+}

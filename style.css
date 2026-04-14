@@ -1,0 +1,138 @@
+/*
+   ESTILO GENERAL
+ */
+
+body {
+    font-family: Arial;
+    background-color: #b6adad;
+    background-image: url(naruto-fondo.avif);
+    color: white;
+    text-align: center;
+}
+
+/*
+   CONTENEDOR PRINCIPAL
+ */
+
+.contenedor {
+    display: flex;
+
+    /* DIRECCIÓN */
+    flex-direction: row; 
+
+    /* ESPACIADO */
+    justify-content: space-around;
+
+    /* ALINEACIÓN */
+    align-items: center;
+
+    /* PERMITIR SALTO */
+    flex-wrap: wrap;
+
+    align-content: center;
+    width: 90%;
+    margin: auto;
+    padding: 30px;
+
+    border: 2px solid rgb(121, 85, 46);
+    padding: 20px;
+}
+
+/*
+   TARJETAS*/
+
+.card {
+    background-color: #000000;
+    margin: 15px;
+    padding: 10px;
+    width: 580px;
+
+    /* tamaño base */
+    flex-basis: 480px;
+
+    border-radius: 0px;
+}
+
+/* IMÁGENES */
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+/* ORDER (cambia posición) */
+.naruto {
+    order: 2;
+}
+
+.sasuke {
+    order: 1;
+}
+
+/* FLEX GROW */
+.sakura {
+    flex-grow: 1;
+}
+
+/* FLEX SHRINK */
+.kakashi {
+    flex-shrink: 1;
+}
+
+/* ALIGN SELF (individual) */
+.sasuke {
+    align-self: flex-end;
+}
+
+/*
+   SEGUNDO CONTENEDOR */
+
+.direcciones {
+    display: flex;
+
+    /* prueba diferentes */
+    flex-direction: row-reverse;
+
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid rgb(0, 0, 0);
+    margin-top: 30px;
+    height: 150px;
+}
+
+/* CAJAS */
+.box {
+    background-color: rgb(127, 114, 91);
+    margin: 10px;
+    padding: 20px;
+}
+
+
+
+/*boton de informacion*/
+.mi-boton {
+    display: inline-block;  /* Asegura que ocupe espacio */
+    background-color: #a53f0c !important;
+    color: white;
+    padding: 15px 30px;     /* Esto le da el "cuerpo" al botón (arriba/abajo y lados) */
+    font-size: 16px;        /* Tamaño de letra */
+    border: none;           /* Quita el borde gris por defecto que parece una línea */
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+.mi-boton:hover {
+    background-color: #0963b7; 
+}
+
+.footer{
+    text-align: center;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color:white
+    
+}
